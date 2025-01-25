@@ -25,11 +25,10 @@ public class velocity : MonoBehaviour
         Debug.Log(upVelocity);
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.velocity = new Vector2(0f, upVelocity);
+            rigidBody.linearVelocity = new Vector2(0f, upVelocity);
         }
         freeFall = Mathf.Sqrt(2 * Mathf.Abs(startPos.position.y -
         transform.position.y) / Mathf.Abs(Physics.gravity.y));
         Debug.Log("Time to reach the ground: " + freeFall + " Seconds");
-
     }
 }
